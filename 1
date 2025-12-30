@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Feliz Cumple Sofía</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(#fdecef, #fff);
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  max-width: 720px;
+  padding: 20px;
+}
+
+.tap {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+/* CARTA */
+.envelope {
+  position: relative;
+  width: 260px;
+  height: 170px;
+  margin: 0 auto 20px;
+  cursor: pointer;
+}
+
+.base {
+  width: 100%;
+  height: 100%;
+  background: #f6b1c3;
+  border-radius: 6px;
+}
+
+.flap {
+  position: absolute;
+  inset: 0;
+  background: #f29ab2;
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+  transform-origin: top;
+  transition: transform 1.5s ease;
+}
+
+.envelope.open .flap {
+  transform: rotateX(-180deg);
+}
+
+/* CONTENIDO */
+.card {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.card.show {
+  opacity: 1;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* GALERÍA */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.gallery iframe {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* FLORES */
+.flowers {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <div class="tap">Tocá la carta 💌</div>
+
+  <!-- CARTA -->
+  <div class="envelope" id="envelope">
+    <div class="base"></div>
+    <div class="flap"></div>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="card" id="card">
+    <h1>Feliz cumpleaños, bebita de mi vida 💓</h1>
+
+    <p>A veces pienso y no sé a quién agradecerle<br>
+    por haberme cruzado con vos.</p>
+
+    <p>Siempre doy, y siempre voy a dar, todo por vos.<br>
+    Gracias por tus stickers de bebé,<br>
+    por tus boludeos que siempre vienen con risas,<br>
+    por los “te amo”, los besitos y los abrazos.</p>
+
+    <p>En cada momento malo de mi vida<br>
+    estuviste ahí, sin irte,<br>
+    y eso es algo hermoso que valoro de verdad.</p>
+
+    <p><strong>Felices 17, amor.</strong><br>
+    Te mando un abrazo y un beso<br>
+    que viajan kilómetros para llegar,<br>
+    y para que sientas que estoy ahí con vos.</p>
+
+    <p>— tu gordito</p>
+
+    <!-- GALERÍA (11 fotos + 1 video) -->
+    <div class="gallery">
+      <iframe src="https://drive.google.com/file/d/1U1bgUVpMUGn-YA_VoHiZr0CI9m-R_T-O/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1454C4s9yw3xLu_eZ2vsKRQSEY92Z6gJP/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/14lPwnvNQrviIUQ45jRjBDET3NU9MINuj/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1WQIy6itPM6Gy4bjjOW5UTjuW9I7Wr5Sm/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1zad72027XGhPNg7jo2oyJr9BEQNYXFry/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1tluEbLSj4Mr1gogGtn4ACD_AM-p-JU2D/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1gsQue9MIeneGcfHxiYPk6hx3UzC3Vec2/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1ncL15LCbhaCMTjCo166djei53RSC7S_V/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1lV7iH1F4lirNadI29uqPDwvmWe8dKXNq/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1pywvZ-gSUUm3ICZdQdFctRah2fgpugSh/preview" allow="autoplay"></iframe>
+      <iframe src="https://drive.google.com/file/d/1sp1ISUauatw8fw53fq1p-YzFdT0qLD9l/preview" allow="autoplay"></iframe>
+
+      <!-- VIDEO -->
+      <iframe src="https://drive.google.com/file/d/1NjwSytBEP1a4gkUYHx-REL3P8Ume2LJD/preview" allow="autoplay"></iframe>
+    </div>
+
+    <div class="flowers">🌸 🌷 🌹 🌼 🌸</div>
+  </div>
+
+  <!-- AUDIO (oculto) -->
+  <audio id="musica" loop>
+    <source
+     src="https://files.catbox.moe/l6n7u9.mp3" type="audio/mpeg">
+  </audio>
+
+</div>
+
+<script>
+const envelope = document.getElementById("envelope");
+const card = document.getElementById("card");
+const musica = document.getElementById("musica");
+
+envelope.addEventListener("click", () => {
+  envelope.classList.add("open");
+  card.classList.add("show");
+
+  // 🎵 Intentar reproducir la música
+  musica.play().catch(err => {
+    console.log("Error al reproducir música:", err);
+  });
+});
+</script>
+
+</body>
+</html>
